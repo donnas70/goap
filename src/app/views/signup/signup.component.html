@@ -1,0 +1,33 @@
+<mat-card id="card" class="signupcontent">
+    <form #signupForm="ngForm" >
+        <h1>Create Account</h1>
+        <div >
+            <label>User Name</label><br/>
+            <input #nameControl="ngModel" class="inputstyle"  [(ngModel)]="name" name="name" maxlength="70" required >
+            </div>
+        <div >
+        <label>Email Address</label><br/>
+        <input #emailControl="ngModel" class="inputstyle" [(ngModel)]="email" name="mail" maxlength="70" email required >
+        </div>
+        <div >
+              <label>Password</label><br/>
+              <input  #passwordControl="ngModel" class="inputstyle" style="margin-bottom:0px;" [(ngModel)]="password" name="password" maxlength="70" type="password" required >
+              <p style="font-size:small;font-style:italic;margin-bottom: 1.5em;">Passwords must be at least 6 characters.</p>
+              </div>
+              <div >
+                  <label>Re-enter Password</label><br/>
+                  <input  #passwordControl="ngModel" class="inputstyle" [(ngModel)]="password2" name="password" maxlength="70" type="password" required >
+                  </div>
+                  <div style="margin-top:1em;">
+              <button  mat-raised-button color="primary" style="margin-right:5px;" [disabled]="!signupForm.form.valid" type="button" (click)="signup()">Create Account</button>
+              </div>
+        <p>Already have an account? <a style="color:blue;" (click)="goToLogin()">Log In</a></p>     
+        <p *ngIf="errorMsg" style="color:red; font-size: 12pt">{{errorMsg}}</p>
+      </form> 
+</mat-card>
+
+       
+   
+
+
+ 

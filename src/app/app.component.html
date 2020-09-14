@@ -1,0 +1,20 @@
+
+ <div class="navbar">  
+   <div class="row" style="width:100%;">
+    <div class="column" style="text-align:left;">
+        <h1 class="first_header" >Get Out and Ride</h1>
+    </div>
+   <div class="column" style="text-align:right;">
+    <img class="logo"  src="/assets/img/logo2.png">
+  </div>
+</div>
+    <ul class="menu ">
+     <li class="menuli" routerLink="/home" routerLinkActive="menuli-active" (click)="currentMenu=menus.home">HOME</li>    
+     <li class="menuli" routerLink="/clubs" routerLinkActive="menuli-active" (click)="currentMenu=menus.clubs">CLUBS</li>
+     <li class="menuli" routerLink="/events" routerLinkActive="menuli-active" (click)="currentMenu=menus.events">EVENTS</li>
+     <li class="menuli" [class.menuli-active]="currentMenu==menus.rideshare" (click)="rideshare()">RIDE SHARE</li>
+   </ul>
+ </div> 
+ <div class="content" >
+  <router-outlet ></router-outlet>
+ </div>

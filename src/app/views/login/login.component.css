@@ -1,0 +1,20 @@
+.logincontent {
+    text-align: left;
+    margin:5em auto;
+    width:30%;
+    padding-left:5em;
+}
+
+@media screen and (max-width: 1000px) {
+    .logincontent {
+        width:40%;} }
+
+@media screen and (max-width: 800px) {
+    .logincontent {
+        width:50%;} }
+    
+@media screen and (max-width: 500px) {
+    .logincontent {
+        width:60%;
+        padding-left:2em;} }
+

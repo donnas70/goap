@@ -1,0 +1,116 @@
+
+<div class="eventsContent">
+   <div class="row" >
+           <!-- CALENDAR -->
+                <div class="column" >
+                                <div class="calendarDiv" style="padding-left:1em;padding-right:1em;padding-bottom:1em;">
+                                <h1 class="divHeader" style="padding-left:0px;">Calendar of Events</h1>
+                                <full-calendar class="calStyle"
+                                        defaultView="dayGridMonth"
+                                        [header]="{
+                                                left:   'title',
+                                                center: '',
+                                                right:  'today prev,next'
+                                              }"
+                                        [plugins]="calendarPlugins"
+                                        [weekends]="true"
+                                        [events]="calendarEvents"   
+                                        (eventClick)="handleEventClickLarge($event)"            
+                                        ></full-calendar>
+                               </div>
+                               <label style="cursor:pointer;font-size:smaller;color:rgb(230, 167, 72);font-style: italic;font-weight:500;" (click)="openDialog()">Suggest an Event Addition</label>
+                                
+                        </div>
+            <!-- EVENTS -->
+       <div class="column eventsDiv" >
+           <div class="row">               
+               <div class="column" style="width:60%;border:1px solid black;">
+                    <h1 class="divHeader">Upcoming Events</h1>
+                    <ul >
+                        <li *ngFor="let evnt of upcomingList; let i=index" class="listContent" >                        
+                           <h3 class="eventDate" >{{evnt.date_display}}</h3>
+                           <h4 class="eventName"><a #para [href]="evnt.url" target="_blank" style="cursor:pointer">{{evnt.name}}</a></h4>
+                           <p class="eventInfo">{{evnt.location}}</p>
+                           <p  class="eventInfo">{{evnt.description}}</p>
+                        </li>                         
+                    </ul>
+               </div>
+               <div class="column" style="width:40%;border:1px solid black;">
+                        <h1 class="divHeader">All Events</h1>
+                        <ul >
+                            <li *ngFor="let evnt of eventsList" class="listContent" >
+                               <h3 class="eventDate">{{evnt.month}}</h3>
+                               <h4 class="eventName"><a [href]="evnt.url" target="_blank" >{{evnt.name}}</a></h4>
+                               <p class="eventInfo">{{evnt.location}}</p>                        
+                            </li>          
+                            <li *ngFor="let evnt of eventsList2 " class="listContent">
+                               <h3 class="eventDate">{{evnt.month}}</h3>
+                               <h4 class="eventName"><a [href]="evnt.url" target="_blank">{{evnt.name}}</a></h4>
+                               <p class="eventInfo">{{evnt.location}}</p>
+                            </li>                    
+                            </ul> 
+                   </div>
+           </div>
+        </div>
+       
+   </div>
+</div>
+
+<div class="eventsContentSmall">
+   <div class="calendarDiv" >
+       <h1 class="divHeader" style="padding-left:0px;">Calendar of Events</h1>
+            <full-calendar class="calStyle"
+                defaultView="dayGridMonth"
+                [header]="{
+                   left:   'title',
+                   center: '',
+                   right:  'today prev,next'
+                }"
+                [plugins]="calendarPlugins"
+                [weekends]="true"
+                [events]="calendarEvents"   
+                (eventClick)="handleEventClickSmall($event)"
+             ></full-calendar>
+             <label style="cursor:pointer;font-size:smaller;color:rgb(16, 45, 141);font-style: italic;font-weight:500;" (click)="openDialog()">Suggest an Event Addition</label>
+ 
+   </div>
+
+                         <!-- EVENTS -->
+   <div class="row eventsDiv" >         
+        <div class="column" style="width:60%;">
+            <h1 class="divHeader">Upcoming Events</h1> 
+            <ul >
+               <li  *ngFor="let evnt of upcomingList" class="listContent" > 
+                  <h3 class="eventDate">{{evnt.date_display}}</h3>
+                  <h4 class="eventName"><a #para2 [href]="evnt.url" target="_blank" style="cursor:pointer">{{evnt.name}}</a></h4>
+                  <p class="eventInfo">{{evnt.location}}</p>
+                  <p class="eventInfo">{{evnt.description}}</p>
+                </li>                         
+            </ul>
+            <hr style="background-color:burlywood;height:.2em;">     
+        </div>         
+  </div>
+
+  <div class="row eventsDiv" >        
+   <div class="column" style="width:40%;">
+       <h1 class="divHeader">All Events</h1>
+       <ul >
+         <li *ngFor="let evnt of eventsList" class="listContent" >
+           <h3 class="eventDate">{{evnt.month}}</h3>
+           <h4 class="eventName"><a [href]="evnt.url" target="_blank">{{evnt.name}}</a></h4>
+           <p class="eventInfo">{{evnt.location}}</p>                        
+         </li>          
+         <li *ngFor="let evnt of eventsList2 " class="listContent">
+           <h3 class="eventDate">{{evnt.month}}</h3>
+           <h4 class="eventName"><a [href]="evnt.url" target="_blank">{{evnt.name}}</a></h4>
+           <p class="eventInfo">{{evnt.location}}</p>
+         </li>                    
+      </ul> 
+   </div>
+</div>   
+<span style="height:.5em;">&nbsp;</span>                          
+</div>
+
+
+
+ 

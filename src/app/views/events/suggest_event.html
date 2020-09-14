@@ -1,0 +1,31 @@
+<div class="fontfam">
+<div >
+  <label  *ngIf="success" class="success">An email has been sent to the administrator. Thank you for your suggestion.</label>
+</div>
+<div *ngIf="!success" >
+  <h1 mat-dialog-title>Suggest an Event </h1>
+  <p class="modalFont">Know of an event close by that's missing from the list? Enter the information below.</p>
+  <table cellpadding="10" style="width:95%;" class="modalFont">
+    <tr >
+      <td style="text-align:left;"><input class="input" placeholder="Event Name" [(ngModel)]="data.eventName"></td>
+    </tr>
+    <tr >
+      <td style="text-align:left;"><input class="input" placeholder="Date of Event" [(ngModel)]="data.eventDate"></td>
+    </tr>
+    <tr >
+      <td style="text-align:left;"><input class="input" placeholder="Location" [(ngModel)]="data.location"></td>
+    </tr>
+    <tr>
+      <td><input class="input" placeholder="Url" [(ngModel)]="data.url"></td>
+    </tr>
+    <tr>
+        <td><textarea style="width:100%;" placeholder="Description" rows="8" [(ngModel)]="data.description"></textarea></td>
+    </tr> 
+</table> 
+
+<div mat-dialog-actions style="float:right;">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onClose()"  cdkFocusInitial>Ok</button>
+</div>
+</div>
+</div>

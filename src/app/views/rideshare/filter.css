@@ -1,0 +1,22 @@
+.success {    
+    font-weight:500;
+    font-style:italic;
+    color:rgb(33, 33, 223);
+}
+
+.input {
+    width:10em;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+
+.modalFont {
+    font-size: 12pt;
+}
+
+.errFont {
+    font-size: 10pt;
+    color:red;
+    font-weight: 500;
+}

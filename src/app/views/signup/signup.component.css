@@ -1,0 +1,19 @@
+.signupcontent {
+    text-align: left;
+    margin:5em auto;
+    width:30%;
+    padding-left:5em;
+}
+
+@media screen and (max-width: 1000px) {
+    .signupcontent {
+        width:40%;} }
+
+@media screen and (max-width: 800px) {
+    .signupcontent {
+        width:50%;} }
+    
+@media screen and (max-width: 500px) {
+    .signupcontent {
+        width:60%;
+        padding-left:2em;} }

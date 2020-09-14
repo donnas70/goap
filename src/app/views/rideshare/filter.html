@@ -1,0 +1,46 @@
+<div class="fontfam">
+<div *ngIf="!success" >
+  <h1 mat-dialog-title>Filter Local Rides</h1>
+  <p class="errFont" *ngIf="isError">{{errMsg}}</p>
+  <table cellpadding="10" style="width:95%;" class="modalFont">
+      <tr >
+        <td>
+          <ul *ngFor="let rt of rideTypes">
+            <li><input type="checkbox" [(ngModel)]="rt.selected"  (change)="clearErrors()" /> {{rt.name}}</li>
+          </ul>
+        </td>
+        </tr>
+    <tr >
+    <td>
+      <ul *ngFor="let c of filterCounties">
+        <li><input type="checkbox" [(ngModel)]="c.selected"  (change)="clearErrors()" /> {{c.name}}</li>
+      </ul>
+    </td>
+    </tr>
+    <tr >
+    <td>
+        <ul *ngFor="let s of speeds">
+          <li><input type="checkbox" [(ngModel)]="s.selected"  (change)="clearErrors()" /> {{s.name}}</li>
+        </ul>
+      </td>
+      </tr>
+      <tr >
+          <td style="text-align:left;">
+            <input type="text" class="input" placeholder="Min miles" [(ngModel)]="minMiles"  (input)="clearErrors()">
+            <input type="text" class="input" placeholder="Max miles" [(ngModel)]="maxMiles"  (input)="clearErrors()">
+          </td>
+        </tr>
+        <tr >
+            <td style="text-align:left;">
+              <input type="text" class="input" placeholder="mm/dd/yyyy" [(ngModel)]="minDate"  (input)="clearErrors()">
+              <input type="text" class="input" placeholder="mm/dd/yyyy" [(ngModel)]="maxDate" (input)="clearErrors()" >
+            </td>
+        </tr>
+</table> 
+
+<div mat-dialog-actions style="float:right;">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onClose()"  cdkFocusInitial>Ok</button>
+</div>
+</div>
+</div>

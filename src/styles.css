@@ -1,0 +1,268 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
+body {
+    background-color:rgb(6, 44, 80);
+    padding:0px;
+    margin:0px;
+    font-family: calibri;
+   }
+
+   /* Prevents Mobile Safari from bumping up font sizes in landscape */
+@media only screen and (max-device-width: 480px) {
+	body {
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
+}
+
+   .row
+  {
+      display: table;
+      width: 100%;
+  }
+  .column
+  {
+      display: table-cell;
+  }
+
+  a {
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+  }
+  a:hover {
+    color:rgb(23, 137, 212);
+  }
+  a:visited {
+    color: black;
+  }
+
+  ul {
+    list-style-type: none;
+  }   
+    
+    /* ////////////   HEADER STYLE  ///////////////////////////////// */
+
+/*  .header {    
+    
+    position: fixed;    
+    top:0px;
+    background-color:rgb(31,78,121);
+    margin:0px;
+    width: 100%;
+    z-index:500;
+  }  */
+
+    /* /////////////   LOGO AND HEADER TEXT STYLING  /////////////////////////////// */
+
+  .logo {
+    width:7em; 
+    padding-top:.5em;
+    padding-bottom:0em;
+    margin-bottom:-3em;
+    padding-right:.5em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .logo {
+      margin-bottom:-2.5em; } }
+
+  @media screen and (max-width: 900px) {
+    .logo {
+      width:6em;
+      margin-bottom:-2em; } }
+
+      @media screen and (max-width: 650px) {
+        .logo {
+          width:5em; } }
+
+          @media screen and (max-width: 600px) {
+            .logo {
+              width:4em; } }
+    
+          @media screen and (max-width: 460px) {
+            .logo {
+              width:3.5em;
+              margin-bottom:-1.5em; } }
+
+              @media screen and (max-width: 400px) {
+                .logo {
+                  width:3em;
+                  padding-right:.2em; } }
+
+                  .first_header {
+                    color:rgb(204, 153, 0);
+                    font-size: 40pt;
+                    margin-top:0em; 
+                    margin-bottom:0em;
+                    padding-top:0em;
+                    padding-left:.5em;
+                    font-family: Roboto, "Helvetica Neue", sans-serif;
+                  }
+                
+                  @media screen and (max-width: 900px) {
+                    .first_header {
+                      font-size: 40pt; } }
+                    
+                      @media screen and (max-width: 600px) {
+                        .first_header {
+                          font-size: 30pt; } }
+                
+                          @media screen and (max-width: 460px) {
+                            .first_header {
+                              font-size: 25pt; } }
+                            
+                              @media screen and (max-width: 400px) {
+                                .first_header {
+                                  font-size: 20pt; } }
+
+  /* ////////////  NAVIGATION BAR  ////////////////////// */
+
+  .navbar {
+    position:fixed;
+    width:100%;
+    margin:0px;
+    padding-bottom:.5em;
+    background-image: linear-gradient(rgb(43, 113, 170), rgb(85, 78, 78));
+    top:0;
+    text-align: center;
+    z-index:1000;
+  }
+
+   /* ///////////  MENU STYLING  //////////////////////// */
+
+  .menu {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14pt;
+    margin-top:.5em;
+    margin-bottom:0em;
+  }   
+  
+  @media screen and (max-width: 1000px) {
+    .menu {
+      font-size: 12pt; } }
+  
+  @media screen and (max-width: 853px) {
+    .menu {
+      font-size: 11pt; } }
+
+  @media screen and (max-width: 785px) {
+    .menu {
+      font-size: 10pt; } }
+
+  @media screen and (max-width: 718px) {
+     .menu {
+      font-size: 9pt; } }
+    
+  @media screen and (max-width: 650px) {
+     .menu {
+     font-size: 8pt; } }
+
+  @media screen and (max-width: 582px) {
+     .menu {
+      font-size: 7.5pt; } }
+    
+    .menuli {        
+    display:inline;
+    color: white;
+    text-decoration: none;
+    padding-right: 5em;
+    cursor: pointer;
+    font-weight: bolder;
+    outline:0;
+  }
+
+  @media screen and (max-width: 450px) {
+    .menuli {
+      padding-right: 3em;; } }
+
+  @media screen and (max-width: 350px) {
+    .menuli {
+      padding-right: 2em;; } }
+
+  .menuli-active {
+      font-style: italic;
+      color: rgb(204, 153, 0);
+  }
+
+    /* /////////  CONTENT POSITIONING  //////////////////////////////// */
+
+  .content{
+    width:100%;
+    position: relative;    
+    /* overflow-y:scroll; */
+    top:120px;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media screen and (max-width: 1000px) {
+    .content {
+      top:110px; } }
+  @media screen and (max-width: 900px) {
+    .content {
+      top:100px; } }
+
+      @media screen and (max-width: 800px) {
+        .content {
+          top:90px; } }
+
+          @media screen and (max-width: 650px) {
+            .content {
+              top:70px; } }
+
+              @media screen and (max-width: 600px) {
+                .content {
+                  top:60px; } }
+              
+                  @media screen and (max-width: 400px) {
+                    .content {
+                      top:50px; } }
+        
+    /* ///////////////////////////////////////////////////// */
+
+.seperator {
+  border-top: 1px solid lightgrey;
+}
+html, body { height: 100%; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+.inputstyle {
+  border:1px solid black;
+  width:75%;
+  font-size: 12pt;
+  margin: 1em auto;
+}
+
+@media screen and (max-width: 800px) {
+  .inputstyle {
+    width:90%; } }
+
+  /* //////////////////////////////////////////////////////////*/
+
+  .calendarDiv {
+    background-color:burlywood;
+   /*  border:1px solid black; */
+    margin-right:.2em;
+    padding-left:1em;
+    padding-right:1em;
+    padding-bottom:1em;
+  }
+
+  @media screen and (max-width: 700px) {
+    .calendarDiv {
+      width:90%; } }
+  
+      
+
+      .divHeader {
+        padding-left:1em;
+        color:white;
+        font-size: 25pt;
+      }
+    
+      @media screen and (max-width: 1100px) {
+        .divHeader {
+          font-size: 20pt; } }
+        
+      @media screen and (max-width: 700px) {
+        .divHeader {
+          font-size: 15pt; } }

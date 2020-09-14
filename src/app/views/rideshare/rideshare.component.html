@@ -1,0 +1,103 @@
+<div class="rideshare_header row">
+   <div class="column welcomediv" >
+        Welcome {{ username }}
+   </div>
+   <div class="column" style="text-align:right;">
+        <img style="width:30px;margin-left:1em;cursor:pointer" src="/assets/img/notifications.png" title="Notification Settings" />
+        <img style="width:25px;margin-left:1em;margin-right:2em;cursor:pointer" src="/assets/img/logout.png" (click)="logout()" title="Logout" />
+   </div>
+</div>
+<div class="row rsContent" >
+  <!-- CALENDAR -->
+  <div class="column calendarDiv" style="width:40%;">
+    <h1 class="divHeader" style="padding-left:0px;width:100%;text-align: left;">Ride Calendar</h1>
+        <full-calendar class="calStyle"
+              defaultView="dayGridMonth"
+              [header]="{
+                      left:   'title',
+                      center: '',
+                      right:  'today prev,next'
+                    }"
+              [plugins]="calendarPlugins"
+              [weekends]="true"
+              [events]="calendarRides"               
+              ></full-calendar>
+</div>
+<div class="rideshare_content column" >
+     <div class="listContent">     
+     <img class="filter" src="/assets/img/filter.png" title="Filter" (click)="openDialog()" />
+     <span class="listHeader">Upcoming Local Rides</span>
+     <ul >
+        <li class="monthli" [hidden]="m.rides.length==0" *ngFor="let m of monthlist" >     
+          <h2 class="monthHeader">{{m.monthval}} {{m.year}}</h2>
+          <ul style="background-color:bisque;">
+            <li class="dayli" *ngFor="let ride of m.rides" >   
+               <span class="datespan">{{ride.date}}</span>
+               <span class="rideHeader">
+               {{ride.miles}} {{ride.ride_type}} in {{ride.county}}  -  {{ride.location}} </span>
+               <span class="riders" title="View Rider Details" >1 rider</span><br/>
+               <span  class="rideTitle" (click)="ride.showD=!ride.showD">{{ride.title}}</span>
+               <div style="margin-top:-1.3em;">
+                 <span *ngIf="!ride.showD" class="plus" title="View Description" (click)="ride.showD=true">+</span>
+                 <span *ngIf="ride.showD" class="minus" title="Close Description" (click)="ride.showD=false">-</span>
+                 <p *ngIf="ride.showD" class="ridespeed">{{ride.speed}}</p>
+                 <p *ngIf="ride.showD" class="ridedescript">                  
+                  {{ride.description}}</p></div>
+               <hr style="margin-right:5em;" >
+            </li>
+          </ul>
+        </li>                       
+     </ul>
+     </div>
+</div>
+</div>
+<div class="row rsContentSmall" > 
+    <div class="calendarDivsmall" >
+        <h1 class="divHeader" style="padding-left:0px;margin-top:0px;width:100%;text-align: left;">Ride Calendar</h1>
+        <full-calendar class="calStyle"
+        defaultView="dayGridMonth"
+        [header]="{
+                left:   'title',
+                center: '',
+                right:  'today prev,next'
+              }"
+        [plugins]="calendarPlugins"
+        [weekends]="true"
+        [events]="calendarRides"               
+        ></full-calendar>
+      </div>   
+      <div class="rideshare_content" >
+          <div class="listContent">     
+          <img class="filter" src="/assets/img/filter.png" title="Filter" (click)="openDialog()" />
+          <span class="listHeader">Upcoming Local Rides</span>
+          <ul >
+             <li class="monthli" [hidden]="m.rides.length==0" *ngFor="let m of monthlist" >     
+               <h2 class="monthHeader">{{m.monthval}} {{m.year}}</h2>
+               <ul style="background-color:bisque;">
+                 <li class="dayli" *ngFor="let ride of m.rides" >   
+                    <span class="datespan">{{ride.date}}</span><br/>
+                    <span class="rideHeader">
+                    {{ride.miles}} {{ride.ride_type}} in {{ride.county}}</span>
+                    <span class="riders" title="View Rider Details" >1 rider</span><br/>
+                    <span  class="rideTitle" (click)="ride.showD=!ride.showD">{{ride.title}}</span>
+                    <div style="margin-top:-1.3em;">
+                      <span *ngIf="!ride.showD" class="plus" title="View Description" (click)="ride.showD=true">+</span>
+                      <span *ngIf="ride.showD" class="minus" title="Close Description" (click)="ride.showD=false">-</span>
+                      <p *ngIf="ride.showD" class="ridespeed">{{ride.speed}}<br/>Location: {{ride.location}}</p>
+                      <p *ngIf="ride.showD" class="ridedescript">                  
+                       {{ride.description}}</p></div>
+                    <hr style="margin-right:5em;" >
+                 </li>
+               </ul>
+             </li>                       
+          </ul>
+          </div>
+     </div>  
+     <span style="height:.5em;">&nbsp;</span>  
+</div>
+    
+   
+   
+
+
+ 

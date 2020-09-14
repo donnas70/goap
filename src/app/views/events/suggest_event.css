@@ -1,0 +1,16 @@
+.success {    
+    font-weight:500;
+    font-style:italic;
+    color:rgb(33, 33, 223);
+}
+
+.input {
+    width:100%;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+
+.modalFont {
+    font-size: 12pt;
+}

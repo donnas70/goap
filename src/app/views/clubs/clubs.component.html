@@ -1,0 +1,22 @@
+
+
+<div class="clubscontent">   
+    <ul >
+        <li *ngFor="let club of clubs | async; " >
+            <h1 class="title"><a  [href]="club.url" target="_blank" >{{club.name}}</a></h1>     
+            <div class="row">   
+                <div class="column midsection" >
+                    <p class="column midpara" >
+                            <a  [href]="club.url" target="_blank" > <img class="midimg" *ngIf="getImgUrl(club.id) != ''" [src]="getImgUrl(club.id)" /> </a>
+                         {{club.description}}</p>
+                </div>
+            </div>  
+            <hr class="seperator" >
+        </li>
+    </ul>
+    <label class="suggestlbl" (click)="openDialog()">Suggest a Club Addition</label>
+   
+</div>
+
+
+ 

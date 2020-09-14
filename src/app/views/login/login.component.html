@@ -1,0 +1,44 @@
+<mat-card id="card" class="logincontent" *ngIf="currView==views.login">
+    <form #loginForm="ngForm" >
+        <h1>Log In</h1>
+        <div >
+        <label>Email</label><br/>
+        <input class="inputstyle" #emailControl="ngModel"  [(ngModel)]="email" name="mail" maxlength="70" email required >
+        </div>
+        <div >
+              <label>Password</label><br/>
+              
+              <input class="inputstyle" #passwordControl="ngModel"  [(ngModel)]="password" name="password" maxlength="70" type="password" required >
+        </div>
+        <div style="margin-top:1em;">
+              <button mat-raised-button color="primary" style="margin-right:5px;" [disabled]="!loginForm.form.valid" type="button" (click)="login()">login</button>
+              <button mat-raised-button color="primary" style="margin-right:5px;float:right;" type="button" (click)="register()">register</button>
+        </div>
+        <div style="color:blue;font-size:9pt;padding-top:.5em;padding-bottom:0px;cursor:pointer;" (click)="currView=views.forgotpassword">Forgot Your Password?</div>
+        <p *ngIf="errorMsg" style="color:red; font-size: 12pt">{{errorMsg}}</p>
+      </form>
+</mat-card>
+
+<mat-card id="card" class="logincontent" *ngIf="currView==views.forgotpassword">
+      <form #forgotForm="ngForm" >
+          <h1>Forgot Your Password</h1>
+          <hr>
+          <p>Enter your email address below, and we'll email you instructions on how to change your password.</p>
+          <div >
+          <label>Email</label><br/>
+          <input class="inputstyle" #emailControl="ngModel"  [(ngModel)]="email" name="mail" maxlength="70" email required >
+          </div>
+          <div style="margin-top:1em;">
+                <button mat-raised-button color="primary" style="margin-right:5px;" [disabled]="!forgotForm.form.valid" type="button" (click)="sendForgotEmail()">Submit</button>
+                <button mat-raised-button color="primary" style="margin-right:5px;" type="button" (click)="currView=views.login">Cancel</button>
+          </div>
+          <p *ngIf="errorMsg" style="color:red; font-size: 12pt">{{errorMsg}}</p>
+        </form>
+  </mat-card>
+
+
+       
+   
+
+
+ 

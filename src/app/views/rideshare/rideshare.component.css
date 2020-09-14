@@ -1,0 +1,238 @@
+.rsContent {
+    display: block;
+  }
+
+  @media screen and (max-width: 700px) {
+    .rsContent {
+      display: none; } }
+  
+  .rsContentSmall {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .rsContentSmall {
+      display: block; } }
+
+.rideshare_header {
+    width:100%; 
+    background-color:rgba(172, 229, 255, 0.829);
+    margin:-.5em auto;
+    padding-bottom:1em;
+    padding-top:.5em;
+    font-size:12pt;
+}
+
+
+.rideshare_content {    
+    width:100%; 
+    background-color:rgb(48, 112, 138);
+    height:100.3vh;
+}
+
+.welcomediv {
+    text-align:left;
+    padding-left:.5em;
+    font-size:12pt;
+    font-weight:600;
+    font-style:italic;
+}
+
+@media screen and (max-width: 1000px) {
+    .rideshare_header {
+        padding-top:2em;
+        font-size:10pt; } }
+
+.headerbtn {
+    margin-left:1em;
+    cursor:pointer;
+}
+@media screen and (max-width: 1000px) {
+    .headerbtn {
+        margin-left:.5em; } }
+
+.listContent{
+    width:90%;
+    text-align:left;
+    padding-top:.5em;
+    padding-left:3em;
+    padding-right:1em;
+}
+
+@media screen and (max-width: 1400px) {
+    .listContent {
+        padding-left:1em; } }
+
+        @media screen and (max-width: 700px) {
+            .listContent {
+                padding-left:0em; } }
+
+.rideTitle{
+    font-size:20pt;
+    color:rgb(103, 103, 161);
+    font-weight:bold;
+    cursor:pointer;
+    margin-left:3em;
+}
+
+@media screen and (max-width: 700px) {
+    .rideTitle {
+        margin-left:1em; } }
+
+.filter{
+    width:25px;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .filter {
+        margin-left:1em; } }
+
+.listHeader{
+    font-size:30pt;
+    font-weight:bolder;
+    padding-left:.5em;
+}
+
+@media screen and (max-width: 700px) {
+    .listHeader {
+        font-size:20pt; } }
+
+.monthli {
+    background-color:darksalmon;
+}
+
+.monthHeader {
+    margin-bottom:0px;
+    padding-left:.5em;
+}
+
+.dayli {
+    padding-bottom:.5em;
+    padding-top:1em;
+}
+
+.datespan{
+    font-size:14pt;
+    font-weight:600;
+    color:gray;
+    font-style:italic;
+}
+
+@media screen and (max-width: 1400px) {
+    .datespan {
+        font-size:12pt; } }
+
+.rideHeader{
+    font-size:14pt;
+    font-weight:600;
+    margin-left:3em;
+    color:gray;
+    font-style:italic;
+}
+
+@media screen and (max-width: 1400px) {
+    .rideHeader {
+        font-size:12pt; } }
+    
+@media screen and (max-width: 700px) {
+    .rideHeader {
+        font-size:10pt;
+        margin-left:0em; } }
+
+.riders{
+   font-size:12pt;
+   font-weight:500;
+   color:gray;
+   font-style:italic;
+   float:right;
+   padding-right:1em;
+   cursor:pointer;
+}
+
+.plus{
+    cursor:pointer;
+    font-size:14pt;
+    color:gray;
+    font-style:italic;
+    font-weight:600;
+}
+
+.minus{
+    cursor:pointer;
+    font-size:20pt;
+    color:gray;
+    font-style:italic;
+    font-weight:600;
+}
+
+.ridespeed{
+    font-size:13pt;
+    margin-top:0;
+    font-weight:600;
+    font-style:italic;
+    color:rgb(103, 103, 161);
+}
+
+@media screen and (max-width: 800px) {
+    .ridespeed {
+        font-size:12pt; } }
+    
+@media screen and (max-width: 500px) {
+    .ridespeed {
+        font-size:10pt; } }
+
+.ridedescript{
+    margin-right:5em;
+    font-size:14pt;
+    font-weight:600;
+}
+
+@media screen and (max-width: 800px) {
+    .ridedescript {
+        font-size:12pt; } }
+
+/* ////Calendar style///  */
+
+.calStyle{
+    font-size: 12pt;
+}
+
+@media screen and (max-width: 1500px) {
+  .calStyle  {
+    font-size: 11pt; } }
+
+@media screen and (max-width: 1400px) {
+  .calStyle  {
+    font-size: 8pt; } }
+
+@media screen and (max-width: 1000px) {
+  .calStyle  {
+    font-size: 6pt; } }
+
+@media screen and (max-width: 700px) {
+  .calStyle  {
+    font-size: 12pt; } }
+
+@media screen and (max-width: 500px) {
+  .calStyle  {
+    font-size: 10pt; } }
+
+@media screen and (max-width: 400px) {
+  .calStyle  {
+    font-size: 7pt; } }
+
+@media screen and (max-width: 350px) {
+  .calStyle  {
+    font-size: 6pt; } }
+
+    .calendarDivsmall {
+        background-color:burlywood;
+        padding-left:1em;
+        padding-right:1em;
+        padding-bottom:1em;
+       /*  border:1px solid black; 
+        margin-right:.2em;
+        */
+      }
+        

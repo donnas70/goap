@@ -1,0 +1,119 @@
+a {
+    color:lightskyblue;
+    text-decoration: none;
+    cursor:pointer;
+  }
+  a:hover {
+    color:rgb(221, 50, 50);
+  }
+  a:visited {
+    color: lightskyblue;
+  }
+  .eventsContent {
+    width:99%;
+    margin: .4em auto;
+    display: block;
+  }
+
+  @media screen and (max-width: 700px) {
+    .eventsContent {
+      display: none; } }
+  
+  .eventsContentSmall {
+    width:100%;
+    background-color:burlywood;
+    margin: auto;
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .eventsContentSmall {
+      display: block; } }
+
+  .eventsDiv {
+    background-color:rgb(6, 44, 80);
+   /*  border:1px solid black; */
+    width:65%;
+  }
+
+  @media screen and (max-width: 860px) {
+    .eventsDiv {
+      width:60%; } }
+
+      @media screen and (max-width: 700px) {
+        .eventsDiv {
+          width:100%; } }
+
+ 
+ 
+
+  .listContent {
+    margin-bottom:1em;
+    border-bottom:2px double darkslategrey;
+    margin-right:2em;
+  }
+
+  .eventDate {
+    color:goldenrod;
+    margin:0px;
+    padding:0px;
+    font-size: 14pt;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .eventDate {
+      font-size: 12pt; } }
+
+  .eventName {
+    color:lightskyblue;
+    margin:0px;
+    padding:0px;
+    font-size: 12pt;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .eventName {
+      font-size: 10pt; } }
+
+  .eventInfo {
+    color:white;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:12pt;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .eventInfo {
+      font-size: 11pt; } }
+
+      .calStyle{
+        font-size: 12pt;
+    }
+    
+    @media screen and (max-width: 1500px) {
+      .calStyle  {
+        font-size: 11pt; } }
+    
+    @media screen and (max-width: 1400px) {
+      .calStyle  {
+        font-size: 8pt; } }
+    
+    @media screen and (max-width: 1000px) {
+      .calStyle  {
+        font-size: 6pt; } }
+    
+    @media screen and (max-width: 700px) {
+      .calStyle  {
+        font-size: 12pt; } }
+    
+    @media screen and (max-width: 500px) {
+      .calStyle  {
+        font-size: 10pt; } }
+    
+    @media screen and (max-width: 400px) {
+      .calStyle  {
+        font-size: 7pt; } }
+    
+    @media screen and (max-width: 350px) {
+      .calStyle  {
+        font-size: 6pt; } }
